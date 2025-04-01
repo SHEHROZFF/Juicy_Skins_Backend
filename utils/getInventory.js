@@ -1,4 +1,5 @@
 const axios = require('axios');
+require`dotenv`.config();
 let marketPriceCache = null;
 let lastCacheTime = 0;
 // const CACHE_DURATION = 24 * 60 * 60 * 1000; // Cache duration: 1 day
@@ -55,8 +56,7 @@ const getInventory = async (appid, steamid, contextid = 2, tradeable = false) =>
 const fetchMarketPrices = async () => {
   if (!marketPriceCache || Date.now() - lastCacheTime > CACHE_DURATION) {
     console.log("Fetching prices from the market API...");
-    // const marketApiUrl = 'https://ez-skin-trade-jj29.vercel.app/items'; // Replace with your API endpoint
-    const marketApiUrl = 'https://app-104bed73-570c-4c29-8c41-b23a1613f529.cleverapps.io/items'; 
+    const marketApiUrl = `${process.env.MARKET_API_UR}/items`; 
     const marketApiResponse = await axios.get(marketApiUrl);
     marketPriceCache = marketApiResponse.data;
     lastCacheTime = Date.now();
