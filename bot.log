@@ -742,3 +742,9 @@
 2025-03-23T05:30:34.810Z [INFO]: Heartbeat: Bot is online.
 2025-03-23T05:31:34.819Z [INFO]: Heartbeat: Bot is online.
 2025-03-23T05:32:18.932Z [INFO]: Received SIGINT. Shutting down gracefully...
+2025-04-01T15:04:13.346Z [INFO]: Config: Account Name is set.
+2025-04-01T15:04:13.349Z [INFO]: Attempting to log in to Steam (Attempt 1)...
+2025-04-01T15:04:16.849Z [INFO]: Steam client logged in and online
+2025-04-01T15:04:17.253Z [INFO]: Web session established.
+2025-04-01T15:05:13.357Z [INFO]: Heartbeat: Bot is online.
+2025-04-01T15:05:32.152Z [INFO]: Received SIGINT. Shutting down gracefully...
