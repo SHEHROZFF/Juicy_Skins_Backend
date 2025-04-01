@@ -1,5 +1,5 @@
 const axios = require('axios');
-require`dotenv`.config();
+require('dotenv').config();
 let marketPriceCache = null;
 let lastCacheTime = 0;
 // const CACHE_DURATION = 24 * 60 * 60 * 1000; // Cache duration: 1 day
