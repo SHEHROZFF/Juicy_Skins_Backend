@@ -1,7 +1,9 @@
 const axios = require('axios');
 let marketPriceCache = null;
 let lastCacheTime = 0;
-const CACHE_DURATION = 24 * 60 * 60 * 1000; // Cache duration: 1 day
+// const CACHE_DURATION = 24 * 60 * 60 * 1000; // Cache duration: 1 day
+const CACHE_DURATION = 15 * 24 * 60 * 60 * 1000; // Cache duration: 15 days
+
 
 const getInventory = async (appid, steamid, contextid = 2, tradeable = false) => {
   console.log("Fetching inventory...");
