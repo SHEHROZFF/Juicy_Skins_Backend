@@ -19,7 +19,6 @@ const getInventory = async (appid, steamid, contextid = 2, tradeable = false) =>
   try {
     const url = `https://steamcommunity.com/inventory/${steamid}/${appid}/${contextid}`;
     const inventoryResponse = await axios.get(url);
-
     // Extract inventory assets and descriptions
     const assets = inventoryResponse.data.assets || [];
     const items = inventoryResponse.data.descriptions || [];
